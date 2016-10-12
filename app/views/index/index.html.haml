@@ -1,147 +1,16 @@
-%h1 Billboard
 %section#modal
-  #subscribe.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "subscribe", :role => "dialog", :tabindex => "-1"}
-    .modal-dialog
-      .modal-body
-        .container
-          .row
-            .col-md-12
-              %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
-              %h3 Subscribe email
-            .col-md-2.col-sm-3.col-xs-4
-              = image_tag 'icon1.png'
-              -# %img.img-responsive{:alt => "", :src => "image/icon1.png"}/
-            .col-md-4.col-sm-3.col-xs-8
-              %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus rhoncus. Maecenas aliquet accumsan leo. Phasellus faucibus molestie nisl. Nullam at arcu a est.
-            .col-md-6.center-block
-              / Subscribe form
-              .subscribe-wrap
-                %form.form-inline{role: "form"}
-                  .form-group
-                    %label.sr-only{for: "exampleInputEmail2"} Email address
-                    %input#exampleInputEmail2.form-control{placeholder: "Enter email", type: "email"}/
-                  %button.btn.btn-submit{type: "submit"} Subscribe
-  // modal contact //
-  #contact.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "contact", :role => "dialog", :tabindex => "-1"}
-    .modal-dialog
-      .modal-body
-        .container
-          .row
-            .col-md-12
-              %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
-              %h3 Contact
-            .col-md-18.col-sm-8
-              / Google Map
-              %section#google-map
-                #map-canvas
-            .col-md-4.col-sm-4
-              / Address
-              %address
-                %h4 Company Name
-                %br/
-                795 Folsom Ave, Suite 600
-                %br/
-                San Francisco, CA 94107
-                %br/
-                (123) 456-7890
-              %address
-                %a{:href => "mailto:#"} first.last@example.com
-  // modal contact //
-
-  // modal work //
-  #work.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "work", :role => "dialog", :tabindex => "-1"}
-    .modal-dialog
-      .modal-body
-        .container
-          .row
-            .col-md-12
-              %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
-              %h3 About our work
-            / about our work 1. column
-            .col-md-3.col-sm-3.col-xs-6
-              = image_tag 'icon5.png'
-              %h4 Fancy features
-              %p.center-block Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
-            / about our work 2. column
-            .col-md-3.col-sm-3.col-xs-6
-              = image_tag 'icon3.png'
-              %h4 Fully responsive
-              %p.center-block Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
-            / about our work 3. column
-            .col-md-3.col-sm-3.col-xs-6
-              = image_tag 'icon4.png'
-              %h4 Sound
-              %p.center-block Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
-            / about our work 4. column
-            .col-md-3.col-sm-3.col-xs-6
-              = image_tag 'icon2.png'
-              %h4 Map integration
-              %p.center-block Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+  = render 'section_modal'
 .container
   #text.row
     / start of row text
-    .col-md-12
-      %h2 Coming soon
+    .slogan
+      %h2 作品集
       %p
-        In this exact moment we
-        %span.highlight working really hard
-        on our new project. You can look forward to an amazing service, which completely
-        = succeed "." do
-          %span.highlight rock your world
-        = succeed "." do
-          %span.highlight So stay tuned
-        %span.highlight
-          %i.fa.fa-facebook-square
-          Facebook
-      %a.btn.btn-primary{"data-target" => "#subscribe", "data-toggle" => "modal"} Subscribe
+        Hi, I'm
+        %span.highlight Vincent
+      %p Here's are the collection of my participated projects.
+      %a.btn.btn-primary{"data-target" => "#about", "data-toggle" => "modal"} Learn More
   / end of row text
-  .row.countdown
-    / start of row countdown
-    .col-md-12
-      / Line Separator
-      .line
-        %h3 How much longer
-      #DateCountdown{"data-date" => "2015-05-07 04:05:00"}
-      / Circle Countdown here you can set up time to countdown just simply change atribute data-date="yyyy-mm-dd time"
-  / end of row countdown
 / end of container
-/
-  \==========================
-  FOOTER - START
-  \===========================
-%footer.navbar.navbar-default.navbar-fixed-bottom{:role => "navigation"}
-  .container
-    / Brand and toggle get grouped for better mobile display
-    .navbar-header
-      %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand.visible-xs{:href => "#"} Billboard
-    #bs-example-navbar-collapse-1.collapse.navbar-collapse
-      %ul.brands.brands-inline.navbar-left
-        %li
-          %a{:href => "#"}
-            %i.fa.fa-facebook
-        %li
-          %a{:href => "#"}
-            %i.fa.fa-twitter
-        %li
-          %a{:href => "#"}
-            %i.fa.fa-google-plus
-        %li
-          %a{:href => "#"}
-            %i.fa.fa-linkedin
-        %li
-          %a{:href => "#"}
-            %i.fa.fa-dribbble
-      %ul.nav.navbar-nav.navbar-right
-        %li
-          %a{"data-target" => "#subscribe", "data-toggle" => "modal", :href => "#"} Subscribe
-        %li
-          %a{"data-target" => "#work", "data-toggle" => "modal", :href => "#"} Our Work
-        %li
-          %a{"data-target" => "#contact", "data-toggle" => "modal", :href => "#"} Contact
-    / /.navbar-collapse
-  / /.container-fluid
+// FOOTER - START //
+= render 'footer'

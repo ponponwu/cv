@@ -1,0 +1,33 @@
+%footer.navbar.navbar-default.navbar-fixed-bottom{role: "navigation"}
+  .container
+    / Brand and toggle get grouped for better mobile display
+    .navbar-header
+      %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", type: "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand.visible-xs{href: "#"} Vincent.Wu
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      %ul.brands.brands-inline.navbar-left
+        -# %li
+        -#   = link_to '#' do
+        -#     = fa_icon 'facebook'
+        -# %li
+        -#   = link_to '#' do
+        -#     = fa_icon 'twitter'
+        %li
+          = link_to 'https://github.com/ponponwu' do
+            = fa_icon 'github'
+        %li
+          = link_to 'https://www.linkedin.com/in/ponpon-wu' do
+            = fa_icon 'linkedin'
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{"data-target" => "#about", "data-toggle" => "modal", href: "#"} About Me
+        %li
+          %a{"data-target" => "#work", "data-toggle" => "modal", href: "#"} Work
+        %li
+          %a{"data-target" => "#contact", "data-toggle" => "modal", href: "#"} Contact
+    / /.navbar-collapse
+  / /.container-fluid

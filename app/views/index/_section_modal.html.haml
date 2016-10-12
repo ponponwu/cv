@@ -1,0 +1,73 @@
+#about.modal.fade.in{"aria-hidden" => "false", "aria-labelledby" => "about", role: "dialog", style: "display: none;", tabindex: "-1"}
+  .modal-dialog
+    .modal-body
+      .container
+        .row
+          .col-md-12
+            %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+            %h3 About Me
+          .col-md-offset-2.col-md-4.col-sm-6.col-xs-12
+            = image_tag 'icon3.png'
+          .col-md-4.col-sm-6.col-xs-12
+            %ul.aboutme_list
+              %li Web Developer
+              %li Focus on Front-end techniques
+              %li Understand Latest JS Framework
+              %li RWD application expierences
+              %li Capable of building REST API with RoR
+
+// modal contact //
+#contact.modal.fade.in{"aria-hidden" => "false", "aria-labelledby" => "contact", role: "dialog", style: "display: none;", tabindex: "-1"}
+  .modal-dialog
+    .modal-body
+      .container
+        .row
+          .col-md-12
+            %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+            %h3 Contact
+          .col-md-12.col-sm-12.col-xs-12.text-center
+            = image_tag 'icon1.png'
+            %address.email
+              %a{:href => "mailto:#"} sheep0406@hotmail.com
+
+// modal contact //
+
+// modal work //
+#work.modal.fade.in{"aria-hidden" => "false", "aria-labelledby" => "work", role: "dialog", style: "display: none;", tabindex: "-1"}
+  .modal-dialog
+    .modal-body
+      .container
+        .row
+          .col-md-12
+            %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+            %h3 About my work
+          .col-md-4.col-sm-6.col-xs-6
+            %a{href: "http://www.mis.ntpu.edu.tw", target: "_blank"}
+              %img.img-responsive.img-rounded{alt: "", src: "image/ntpumis.png"}/
+            %h4 臺北大學資訊管理所網站
+            %p.center-block 網站系統規劃、部署、上線
+            %p.center-block React JS / Rails REST API
+          .col-md-4.col-sm-6.col-xs-6
+            %a{:href => "https://www.ls-ecommerce.com.tw/", :target => "_blank"}
+              %img.img-responsive.img-rounded{:alt => "", :src => "image/ls-ecommerce.png"}/
+            %h4 磊山保經旅平險網站
+            %p.center-block 前端開發、金流介接
+            %p.center-block jQuery / Pay2go / Coffeescript
+          .col-md-4.col-sm-6.col-xs-6
+            %a{:href => "http://leishan.taipei/", :target => "_blank"}
+              %img.img-responsive.img-rounded{:alt => "", :src => "image/ls-activity.png"}/
+            %h4 磊山保經活動網站
+            %p.center-block 前端開發、金流介接
+            %p.center-block jQuery / Pay2go / Coffeescript
+          .col-md-4.col-sm-6.col-xs-6
+            %a{:href => "http://www.locksure.com.tw", :target => "_blank"}
+              %img.img-responsive.img-rounded{:alt => "", :src => "image/locksure.png"}/
+            %h4 今湛企業有限公司
+            %p.center-block 介面調整、功能維護
+            %p.center-block Rails / jQuery / CSS3
+          .col-md-4.col-sm-6.col-xs-6
+            %a{:href => "https://speed-radars.herokuapp.com/", :target => "_blank"}
+              %img.img-responsive.img-rounded{:alt => "", :src => "image/speedradar.png"}/
+            %h4 測速照相列表
+            %p.center-block 網站爬蟲技術擷取南極星網站之資訊
+            %p.center-block Rails / Web Crawler
